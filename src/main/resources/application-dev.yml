@@ -2,9 +2,9 @@ server:
   port: 8083
 spring:
   application:
-    name: springbootConsumerFeign
+    name: carefreeshop
   datasource:
-    url: jdbc:mysql://localhost:3306/basic_information?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/carefree-shop?useUnicode=true&characterEncoding=UTF8&serverTimezone=UTC
     username: root
     password: qeen1013
     driver-class-name: com.mysql.jdbc.Driver
@@ -47,7 +47,11 @@ ribbon:
   MaxAutoRetries: 0     #对当前实例的重试次数，默认0
   MaxAutoRetriesNextServer: 1
 
-redisprefix: demo-user-
+redisprefix: carefree-shop-
+
+fileUploadPath: /Users/yautumn/fileupload/
+fileCreatePath: /Users/yautumn/filecreate/
+
 feign:
   hystrix:
     enabled: true
